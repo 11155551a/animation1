@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      var coworkers={
+        "programmer":"egoing",
+        "desinger":"leezche"
+      };
+      document.write("programmer:"+coworkers.programmer+"<br>");
+      document.write("desinger:"+coworkers.desinger+"<br>");
+      coworkers.bookkeeper = "duru";///데이터추가하는것임
+      document.write("bookkpper:"+coworkers.bookkeeper+"<br>");
+      coworkers["data scientist"]="taeho";///// 이러한 방법도 있는거같음
+      document.write("data scientist:"+coworkers["data scientist"]+"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for(var key in coworkers){
+       document.write(key+': '+coworkers[key]+'<br>');
+     }////위에 초록색 글씨들이 key값들임니다
+    </script>
+<h2>Property & Method</h2>
+<script>
+  coworkers.showAll = function(){
+    for(var key in this){
+     document.write(key+': '+this[key]+'<br>');
+   }
+}//객체에 소속된 함수를 만들수 있다 객체에 소속된 함수를
+/// method라하고 변수들을 property라고한다
+coworkers.showAll();
+  </script>
+
+  </body>
+</html>
